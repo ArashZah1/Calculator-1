@@ -14,42 +14,25 @@ reader.question("What would you like to calculate?", function(input){
 	num1 = Number(tokens[1]);
 	num2 = Number(tokens[2]);
 
-	console.log(`mathSymbol ${mathSymbol}`);
-    console.log(`num1 ${num1}`);
-    console.log(`num2 ${num2}`);
 
-    if (mathSymbol === "+"){
-        console.log(num1 + num2);
-    }
-
-    if (mathSymbol === "-"){
-        console.log(num1 - num2);
-    }
-
-    if (mathSymbol === "*"){
-        console.log(num1 * num2);
-    }
-
-    if (mathSymbol === "/"){
-        console.log(num1 / num2);
-    }
-
-    if (mathSymbol === "sqrt"){
-        console.log(Math.sqrt(num1));
-    }
-
+	console.log('mathSymbol', mathSymbol);
+	console.log('num1', num1);
+	console.log('num2', num2);
+	
+	if (mathSymbol === "+") {
+		console.log(num1 + num2)
+	}
+	if (mathSymbol === "-") {
+		console.log(num1 - num2)
+	}
+	if (mathSymbol === "/") {
+		console.log(num1 / num2)
+	}
+	if (mathSymbol === "*") {
+		console.log(num1 * num2)
+	}
+	
 	// This line closes the connection to the command line interface.
 	reader.close()
-	if (mathSymbol === "sqr"){
-		console.log(Math.pow(num1,2))
-	}
-	if (mathSymbol === "cube"){
-		console.log(Math.pow(num1,3))
-	}
-	if (mathSymbol === "pow"){
-		console.log(Math.pow(num1,num2))
-	}
-	if (mathSymbol === "mod"){
-		console.log(num1 % num2)
-	}
+
 });
